@@ -24,6 +24,16 @@ export class ListaComponent implements OnInit {
       nombre:'Cecilia',
       curso:'Python',
       nota: 7
+    },
+    {
+      nombre:'Hugo',
+      curso:'Go',
+      nota: 10
+    },
+    {
+      nombre:'Nanci',
+      curso:'Python',
+      nota: 3
     }
   ]
 

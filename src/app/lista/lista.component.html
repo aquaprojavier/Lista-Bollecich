@@ -1,16 +1,22 @@
-<h2>Lista de Estudiantes</h2>
-<div>
-   Actualizada al {{fecha | date}}
-</div>
-<div *ngFor="let estudiante of estudiantes">
-    <ul>
-        <li [ngClass]="estudiante.nota < 6 ? 'noPasa' : 'pasa'">
-            <p>{{estudiante.nombre}} del curso {{estudiante.curso}} tuvo una nota de {{estudiante.nota}}</p>
-
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      <h2>Lista de Estudiantes</h2>
+    </div>
+    <div *ngFor="let estudiante of estudiantes">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          [ngClass]="estudiante.nota < 6 ? 'noPasa' : 'pasa'"
+        >
+          <p>
+            {{ estudiante.nombre }} del curso {{ estudiante.curso }} tuvo una
+            nota de {{ estudiante.nota }}
+          </p>
         </li>
-    </ul>
+      </ul>
+    </div>
+    <br>
+    <div>Actualizada a la fecha {{ fecha | date }}</div>
+  </div>
 </div>
-<br>
-
-
-
